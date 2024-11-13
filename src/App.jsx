@@ -43,7 +43,7 @@ export default function App() {
       width="70%"
       margin="0 auto"
     >
-      <Heading level={1}>My Profile</Heading>
+      <Heading level={1}>User Profile</Heading>
 
       <Divider />
 
@@ -68,6 +68,9 @@ export default function App() {
           >
             <View>
               <Heading level="3">{userprofile.email}</Heading>
+              <Heading level="7">First name: {userprofile.firstName}</Heading>
+              <Heading level="7">Last name: {userprofile.lastName}</Heading>
+              <Heading level="7">Owner: {userprofile.id}</Heading>
             </View>
           </Flex>
         ))}

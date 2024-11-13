@@ -9,6 +9,8 @@ export type UserProfile = {
   id: string,
   profileOwner?: string | null,
   updatedAt: string,
+  firstName: string,
+  lastName: string,
 };
 
 export type ModelUserProfileFilterInput = {
@@ -20,6 +22,8 @@ export type ModelUserProfileFilterInput = {
   or?: Array< ModelUserProfileFilterInput | null > | null,
   profileOwner?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
+  firstName?: ModelStringInput | null,
+  lastName?: ModelStringInput | null,
 };
 
 export type ModelStringInput = {
@@ -92,12 +96,16 @@ export type ModelUserProfileConditionInput = {
   or?: Array< ModelUserProfileConditionInput | null > | null,
   profileOwner?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
+  firstName?: ModelStringInput | null,
+  lastName?: ModelStringInput | null,
 };
 
 export type CreateUserProfileInput = {
   email?: string | null,
   id?: string | null,
   profileOwner?: string | null,
+  firstName?: string | null,
+  lastName?: string | null,
 };
 
 export type DeleteUserProfileInput = {
@@ -108,6 +116,8 @@ export type UpdateUserProfileInput = {
   email?: string | null,
   id: string,
   profileOwner?: string | null,
+  firstName?: string | null,
+  lastName?: string | null,
 };
 
 export type ModelSubscriptionUserProfileFilterInput = {
@@ -162,6 +172,8 @@ export type GetUserProfileQuery = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null,
   } | null,
 };
 
@@ -181,6 +193,8 @@ export type ListUserProfilesQuery = {
       id: string,
       profileOwner?: string | null,
       updatedAt: string,
+      firstName?: string | null,
+      lastName?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -199,6 +213,8 @@ export type CreateUserProfileMutation = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null,
   } | null,
 };
 
@@ -215,6 +231,8 @@ export type DeleteUserProfileMutation = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null,
   } | null,
 };
 
@@ -231,6 +249,8 @@ export type UpdateUserProfileMutation = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null,
   } | null,
 };
 
@@ -247,6 +267,8 @@ export type OnCreateUserProfileSubscription = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null
   } | null,
 };
 
@@ -263,6 +285,8 @@ export type OnDeleteUserProfileSubscription = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null,
   } | null,
 };
 
@@ -279,5 +303,7 @@ export type OnUpdateUserProfileSubscription = {
     id: string,
     profileOwner?: string | null,
     updatedAt: string,
+    firstName?: string | null,
+    lastName?: string | null,
   } | null,
 };
